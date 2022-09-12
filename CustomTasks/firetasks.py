@@ -6,6 +6,7 @@ import time
 from fireworks.utilities.fw_utilities import explicit_serialize
 import shutil
 import os
+import pdb
 
 @explicit_serialize
 class MyTask(FiretaskBase):
@@ -44,8 +45,8 @@ class RunSim(FiretaskBase):
         msg = 'Sim completed without errors'
         # os.system(cmd)
 
+        # processing_time = 2
         processing_time = random.randint(10, 300)
         print(f"sleep: {processing_time}")
         time.sleep(processing_time)
-        mod_spec = [{'_push': {'mon': mon, 'con': con, 'sub': sub, 'case': case}}]
-        return FWAction(stored_data={'retval': retval, 'msg': msg}, mod_spec=mod_spec)
+        return FWAction(stored_data={'retval': retval, 'msg': msg})

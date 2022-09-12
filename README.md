@@ -4,7 +4,24 @@
 defining, managing, and executing complext workflows.  This repo contains a couple simple 
 examples I'm using to learn about the tools.
 
-## Quickstart
+## Simulation Mockup
+
+This example simulates launching a long running anylsis.  
+
+First add this directory to the PYTHONPATH so the `CustomTasks` can be found.
+
+Start by queueing up some long-running tasks:
+```
+python producer_sim.py
+```
+
+Nothing will happen until you start the workers. You can launch the workers on
+the local box or multiple remote boxes:
+```
+rlaunch rapidfire --nlaunches infinite
+```
+
+## Tutorial
 
 Start clean:
 ```
@@ -58,20 +75,7 @@ or run it forever:
 rlaunch rapidfire --nlaunches infinite
 ```
 
-## Simulation Mockup
 
-This example simulates launching a long running anylsis.
-
-Start by queueing up some long-running tasks:
-```
-python producer_sim.py
-```
-
-Nothing will happen until you start the workers. You can launch the workers on
-the local box or multiple remote boxes:
-```
-rlaunch rapidfire --nlaunches infinite
-```
 
 ## Dashboard
 
