@@ -21,6 +21,13 @@ the local box or multiple remote boxes:
 rlaunch rapidfire --nlaunches infinite
 ```
 
+Open the dashboard and take a look:
+```
+lpad webgui
+```
+
+![dashboard](./dashboard.png)
+
 ## Tutorial
 
 Start clean:
